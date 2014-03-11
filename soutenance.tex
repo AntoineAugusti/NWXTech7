@@ -14,15 +14,6 @@
 \definecolor{QTPurple}{RGB}{61, 68, 160}
 % Coloration syntaxique
 \usepackage{listings}
-\lstset{ 
-	language=PHP,
-	numbers=left,
-	showstringspaces=false, 
-	tabsize=4,
-	breaklines=true,
-	extendedchars=true,
-	literate={é}{{\'e}}1 {à}{{\`a}}1 {è}{{\`e}}1 {ç}{{\c c}}1
-}
 
 % Un joli thème flat
 \usetheme{Rochester}
@@ -31,29 +22,18 @@
 \usecolortheme[named=QTPurple]{structure}
 \setbeamertemplate{blocks}[shadow=false]
 
-% Générer une page de titre à chaque début de section
-\AtBeginSection[]
-{
-	\begin{frame}[plain]
-	\frametitle{Sommaire}
-	\tableofcontents[currentsection, hideothersubsections]
-	\end{frame} 
-}
-
 % Affichage du logo Quantic Télécom en bas de chaque slide
 \logo{\includegraphics[height=10mm]{images/logo.png}}
 
 % ------------------------------------ %
 % -- METADONNÉES DU DOCUMENT --------- %
 \title[Quantic]{
-	Quantic Télécom\\
-	Point sur la situation actuelle et projets en cours
+	Présentation de Quantic Télécom\\
 }
 \author{
-	Antoine Augusti, 
-	Étienne Batise
+	Antoine Augusti - \underline{antoine@quantic-telecom.net}
 }
-\date{Février 2014}
+\date{12 mars 2014}
 
 \titlegraphic{\includegraphics[height=.3\textheight]{images/logo.png}}
 
@@ -73,8 +53,35 @@
 
 
 	% ///////////////////////////////////////////////////////// %
-	% /// Quantic Télécom actuellement /////////////////////// %
-	\section{Quantic Télécom actuellement}
+	% /// Quantic Télécom c'est quoi ? /////////////////////// %
+	\section{Quantic Télécom c'est quoi ?}
+
+	\subsection{La création}
+		\begin{frame}
+		\frametitle{La création}
+		\begin{tabular}{l l}
+			\begin{minipage}{0.2\textwidth}
+				\begin{center}
+					\includegraphics[width=0.9\textwidth]{images/internet.png}
+				\end{center}
+			\end{minipage}
+
+			\begin{minipage}{0.8\textwidth}
+				\begin{itemize}
+					\item \textbf{opérateur} et \textbf{FAI associatif} créé en sept. 2011
+					\item arrivée à l'INSA de Rouen après le bac
+					\begin{itemize}
+						\item pas de connexion \textit{Internet}, au mieux du \textit{web}
+						\item acquisition d'une nouvelle résidence par l'INSA
+					\end{itemize}
+					\item une dizaine de geeks motivés et \textit{un peu} fous
+					\item déclaration ARCEP dans la foulée
+					\item création sans subvention et sans apport financier
+				\end{itemize}
+			\end{minipage}
+			
+		\end{tabular}
+		\end{frame}
 
 	\subsection{Public couvert aujourd'hui}
 		\begin{frame}
@@ -88,33 +95,48 @@
 
 			\begin{minipage}{0.8\textwidth}
 				\begin{itemize}
-					\item couverture de toutes les résidences de l'INSA de Rouen
+					\item couverture des 5 résidences de l'INSA de Rouen
 					\item présent dans 2 résidences du CROUS : Malibran et Emma Bovary
 					\item 650 adhérents cette année
 					\item 7 personnes impliquées dans le projet
+					\item présent dans 2 \textit{datacenters} : Cogent (Rouen), TH2 (Paris)
 				\end{itemize}
 			\end{minipage}
 			
 		\end{tabular}
 		\end{frame}
 
-	\subsection{Le réseau actuel}
+	% //////////////////////////////////////////// %
+	% /// Le réseau actuel /////////////////////// %
+	\section{Le réseau actuel}
+
+	\subsection{Comment relier les résidences ?}
 		\begin{frame}
-		\frametitle{Le réseau actuel}
-		\vspace{-20px}
+		\frametitle{Comment relier les résidences ?}
+		\vspace{-5px}
 		\begin{center}
-			\includegraphics[width=0.9\textwidth]{images/cacti.png}
+			\includegraphics[width=0.70\textwidth]{images/futurReseau.png}
 		\end{center}
 		
 		\end{frame}
 
-	\subsection{Un exemple d'antennes}
+	\subsection{Fixation d'une antenne}
 		\begin{frame}
-		\frametitle{Un exemple d'antennes}
+		\frametitle{Fixation d'une antenne}
+		\vspace{-5px}
+		\begin{center}
+			\includegraphics[width=0.75\textwidth]{images/jossAntenne.jpg}
+		\end{center}
+		
+		\end{frame}
+
+	\subsection{Exemple d'antennes}
+		\begin{frame}
+		\frametitle{Exemple d'antennes}
 		\begin{tabular}{l l}
 			\begin{minipage}{0.4\textwidth}
 				\begin{center}
-					\includegraphics[width=0.9\textwidth]{images/airFiber.jpg}
+					\includegraphics[width=0.95\textwidth]{images/nanobridge.jpg}
 				\end{center}
 			\end{minipage}
 
@@ -131,128 +153,33 @@
 		\end{frame}
 	% ///////////////////////////////////////////////////////// %
 
+	% //////////////////////////////////////////// %
+	% /// Le sytème d'information /////////////// %
+	\section{Le sytème d'information}
 
-	% ///////////////////////////////////////////////////// %
-	% /// Dysfonctionnements en cours ///////////////////// %
-	\section{Dysfonctionnements en cours}
-
-	\subsection{Couverture réseau dans les résidences}
+	\subsection{Automatiser à l'extrême}
 		\begin{frame}
-		\frametitle{Couverture réseau dans les résidences}
-
+		\frametitle{Automatiser à l'extrême}
 		\begin{tabular}{l l}
 			\begin{minipage}{0.2\textwidth}
 				\begin{center}
-					\includegraphics[width=0.9\textwidth]{images/internet.png}
+					\includegraphics[width=0.9\textwidth]{images/serveur.png}
 				\end{center}
 			\end{minipage}
 
 			\begin{minipage}{0.8\textwidth}
 				\begin{itemize}
-					\item instabilité du réseau en début d'année scolaire
-					\begin{itemize}
-						\item problème de capacité de notre réseau
-						\item attaques
-						\item coupures électriques
-					\end{itemize}
-					\item problème de couverture Wi-Fi à Felling et aux Cateliers
+					\item automatiser les adhésions
+					\item automatiser l'assistance (hotline, tickets, incidents, brèves)
+					\item outils de suivi : assistance et paiements
+					\item de l'adhésion à la connexion fonctionnelle dans l'appartement : \mbox{\textbf{2 minutes}}
 				\end{itemize}
 			\end{minipage}
 			
 		\end{tabular}
 		\end{frame}
 
-	\subsection{Manque de communication}
-		\begin{frame}
-		\frametitle{Manque de communication}
-
-		\begin{tabular}{l l}
-			\begin{minipage}{0.2\textwidth}
-				\begin{center}
-					\includegraphics[width=0.9\textwidth]{images/communication.png}
-				\end{center}
-			\end{minipage}
-
-			\begin{minipage}{0.8\textwidth}
-				\begin{itemize}
-					\item manque de communication envers nos adhérents
-					\item impression de non-réaction en cas de problème
-					\item difficultés pour nos adhérents de connaître le rôle que nous jouons
-					\item mauvaise remontée des problèmes par nos adhérents
-				\end{itemize}
-			\end{minipage}
-			
-		\end{tabular}
-		\end{frame}
-
-	% //////////////////////////////////////////////////// %
-	% /// Projets en cours ////////////////////////////// %
-	\section{Projets en cours}
-
-	\subsection{Projet Quaraba}
-		\begin{frame}
-		\frametitle{Projet Quaraba}
-
-		\begin{tabular}{l l}
-			\begin{minipage}{0.2\textwidth}
-				\begin{center}
-					\includegraphics[width=0.9\textwidth]{images/antennes.png}
-				\end{center}
-			\end{minipage}
-
-			\begin{minipage}{0.8\textwidth}
-				\begin{itemize}
-					\item dorsales de notre réseau assurées par des liaisons hertziennes
-					\item projet Quaraba : \textit{Quantic radioelectrical backbone}
-					\item utilisation d'antennes de nouvelle génération
-					\item besoin de points hauts pour relier les résidences à notre backbone
-					\item besoin d'un relai sur la Côte Sainte-Catherine
-				\end{itemize}
-			\end{minipage}
-			
-		\end{tabular}
-		\end{frame}
-
-	\subsection{Futur backbone}
-		\begin{frame}
-		\frametitle{Futur backbone}
-		\vspace{-5px}
-		\begin{center}
-			\includegraphics[width=0.70\textwidth]{images/futurReseau.png}
-		\end{center}
-		
-		\end{frame}
-
-	% //////////////////////////////////////////////////// %
-	% /// Comment vous investir ////////////////////////// %
-	\section{Comment vous investir}
-	\begin{frame}
-	\frametitle{Comment s'investir}
-
-	\begin{tabular}{l l}
-		\begin{minipage}{0.2\textwidth}
-			\begin{center}
-				\includegraphics[width=0.9\textwidth]{images/equipe.png}
-			\end{center}
-		\end{minipage}
-
-		\begin{minipage}{0.8\textwidth}
-			\begin{itemize}
-				\item remonter les problèmes que vous rencontrez par notre système de tickets
-				\item nous contacter quand vous souhaitez avoir des informations ou que vous avez des questions
-				\item pourquoi pas rejoindre notre équipe ?
-				\begin{itemize}
-					\item découverte de la dimension physique de l'Internet
-					\item plus \textbf{énorme} pour votre CV
-					\item apprentissage technique bien plus poussé que les cours
-					\item mise en place d'un réseau professionnel
-				\end{itemize}
-			\end{itemize}
-		\end{minipage}
-		
-	\end{tabular}
-	\end{frame}
-
+	% ///////////////////////////////////////////////////////// %
 
 % Fin du document
 \end{document}
