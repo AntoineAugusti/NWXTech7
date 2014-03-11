@@ -23,7 +23,9 @@
 \setbeamertemplate{blocks}[shadow=false]
 
 % Affichage du logo Quantic Télécom en bas de chaque slide
-\logo{\includegraphics[height=10mm]{images/logo.png}}
+\newif\ifplacelogo % create a new conditional
+\placelogotrue % set it to true
+\logo{\ifplacelogo\includegraphics[height=10mm]{images/logo.png}\fi}
 
 % ------------------------------------ %
 % -- METADONNÉES DU DOCUMENT --------- %
@@ -143,9 +145,9 @@
 			\begin{minipage}{0.6\textwidth}
 				\begin{itemize}
 					\item antennes point à point, unidirectionnelles
-					\item puissance d'émission inférieure à un téléphone portable
-					\item longue portée : jusqu'à 15km sans obstacles
-					\item prix \textit{relativement} correct
+					\item puissance d'émission inférieure à un téléphone portable (1 W)
+					\item longue portée : jusqu'à 15km sans obstacle
+					\item prix relativement correct
 				\end{itemize}
 			\end{minipage}
 			
@@ -194,8 +196,8 @@
 					\item le plus coûteux en temps et en humain
 					\item 90 \% des problèmes ne viennent pas de nous
 					\item depuis septembre : 500 tickets / 300 appels
-					\item problèmes d'infrastructure
 					\begin{itemize}
+						\item problèmes d'infrastructure
 						\item coupures de courant
 						\item pertubations des ondes (Wi-Fi ou AirMax)
 						\item prises RJ-45 mal câblées
@@ -204,6 +206,19 @@
 			\end{minipage}
 			
 		\end{tabular}
+		\end{frame}
+
+	\placelogofalse 
+	\subsection{Questions}
+		\begin{frame}
+		\frametitle{Questions}
+		\huge{On vous écoute :)}
+		\begin{center}
+			\includegraphics[height=.3\textheight]{images/logo.png}
+		\end{center}
+		\begin{center}
+			\small{\underline{www.quantic-telecom.net}}
+		\end{center}
 		\end{frame}
 
 	% ///////////////////////////////////////////////////////// %
